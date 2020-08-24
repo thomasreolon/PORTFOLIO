@@ -17,7 +17,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 function useIsSmall() {
   const theme = useTheme();
-  const isSmall = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("xs"));
   return isSmall;
 }
 

@@ -1,21 +1,14 @@
 import React from "react";
-import contexts from "../../scripts/contexts";
-import Button from "@material-ui/core/Button";
+
+import cmm from "../../scripts/common";
+
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
 const Navbar = (props) => {
-  // update firebase auth
-  const [{ user }] = contexts.user.useContext();
-  return (
-    <div style={{ backgroundColor: "lightcyan", textAlign: "center" }}>
-      {user ? (
-        `Hello, ${user?.email}`
-      ) : (
-        <Button variant="contained" color="secondary">
-          sign in!
-        </Button>
-      )}
-    </div>
-  );
+  const isSmall = cmm.useIsSmall();
+
+  return isSmall ? <MobileNav /> : <DesktopNav />;
 };
 
 export default Navbar;
