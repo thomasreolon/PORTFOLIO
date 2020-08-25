@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import MobileMenu from "./MobileMenu";
+import PopupIcon from "./PopupIcon";
 
 const useStyles = cmm.makeStyles((theme) => ({
   nav__title: {
@@ -29,14 +30,14 @@ function MobileNav(props) {
     <AppBar position="static">
       <Toolbar>
         <IconButton onClick={toggleDrawer}>
-          <MenuIcon />
+          <MenuIcon style={{ color: "#fff" }} />
         </IconButton>
         <Typography className={classes.nav__title}>My portfolio</Typography>
-        <Button>Login</Button>
+        <PopupIcon />
       </Toolbar>
 
       <Drawer open={drawerState} onClose={toggleDrawer}>
-        <MobileMenu />
+        <MobileMenu onClose={toggleDrawer} />
       </Drawer>
     </AppBar>
   );

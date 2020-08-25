@@ -1,5 +1,7 @@
 import React from "react";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import "fontsource-roboto";
+import "fontsource-fredoka-one";
 
 // more customization: https://material-ui.com/customization/default-theme/
 
@@ -7,25 +9,17 @@ const customTheme = createMuiTheme({
   //--------------------------------------------------------------- THEME COLORS -------
   palette: {
     primary: {
-      main: "#9ffafa",
+      main: "#03071e",
     },
     secondary: {
-      main: "#500",
-    },
-    emph: {
-      fill: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-      main: "#fff",
+      main: "#003049",
     },
   },
   //--------------------------------------------------------------- THEME FONTS -------
   typography: {
-    fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
-      fontWeight: 300,
-      fontSize: "5rem",
-      lineHeight: 1.167,
-      letterSpacing: "-0.01562em",
+    fontFamily: '"Fredoka One", "Roboto", "Helvetica", "Arial", sans-serif',
+    body2: {
+      fontFamily: '"Roboto", "Fredoka One", "Helvetica", "Arial", sans-serif',
     },
   },
   overrides: {
@@ -37,6 +31,9 @@ const customTheme = createMuiTheme({
         "*": {
           margin: "0",
           boxSizing: "border-box",
+        },
+        a: {
+          textDecoration: "none",
         },
       },
     },
