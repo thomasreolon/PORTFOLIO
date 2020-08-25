@@ -1,16 +1,25 @@
 import React from "react";
-import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
-import { GitHub, Instagram } from "@material-ui/icons";
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+} from "@material-ui/core";
 
-const menu = [
-  [GitHub, "@thomasreolon", ".."],
-  [Instagram, "@thomreo", "...."],
-];
+import menuLinks from "./menuLinks";
 
 function MobileMenu(props) {
   return (
     <List>
-      {menu.map(([ItemIcon, title, link]) => (
+      {menuLinks.cv.map(([ItemIcon, title, link]) => (
+        <ListItem button key={title}>
+          <ListItemIcon>{<ItemIcon />}</ListItemIcon>
+          <ListItemText primary={title} />
+        </ListItem>
+      ))}
+      <Divider />
+      {menuLinks.socials.map(([ItemIcon, title, link]) => (
         <ListItem button key={title}>
           <ListItemIcon>{<ItemIcon />}</ListItemIcon>
           <ListItemText primary={title} />
