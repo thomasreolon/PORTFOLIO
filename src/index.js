@@ -9,6 +9,7 @@ import { withTheme } from "./scripts/material/index";
 const MyApp = compose(
   // list the context you want to use here
   contexts.user.withContext,
+  contexts.theme.withContext,
   withTheme
 )(App);
 
