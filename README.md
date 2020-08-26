@@ -11,4 +11,3 @@ still working on it....
 3. DeskMenu --> più spazio verticale
 4. Cerca qualche font
 5. MobileMenu --> colori Drawer
-6. inizia Hero Section
