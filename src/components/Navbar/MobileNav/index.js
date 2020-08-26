@@ -1,7 +1,12 @@
 import React from "react";
+import Menu from "./Menu";
 
 function MobileNav(props) {
-  return <div>Nav Small</div>;
+  return (
+    <>
+      <Menu />
+    </>
+  );
 }
 
 export default MobileNav;

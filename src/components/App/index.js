@@ -4,17 +4,17 @@ import contexts from "../../scripts/contexts";
 import Navbar from "../Navbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import cmm from "../../scripts/common";
 
 // App Component
 function App() {
   return (
-    <React.Fragment>
+    <Router>
       <CssBaseline /> {/* global styles declared in material/theme.js*/}
       <Navbar />
-      <Router to={cmm.ROUTES.LANDING}></Router>
-    </React.Fragment>
+      <Route path={cmm.ROUTES.LANDING}></Route>
+    </Router>
   );
 }
 

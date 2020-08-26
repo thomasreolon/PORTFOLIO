@@ -4,6 +4,9 @@ import IconButton from "@material-ui/core/IconButton";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Menu from "@material-ui/core/Menu";
 import Typography from "@material-ui/core/Typography";
+import projects from "../../../scripts/projects";
+
+const projList = Object.values(projects);
 
 const StyledMenu = withStyles({
   paper: {
@@ -58,8 +61,10 @@ function ToggableMenu(props) {
         onClose={handleClose}
         anchorEl={anchorEl}
       >
-        <Item name="uno" link="/login" />
-        <Item name="due" link="/login" />
+        {projList.map(({ name, link }) => {
+          if (!name || !link) return <></>;
+          return <Item name={name} link={link} />;
+        })}
       </StyledMenu>
     </div>
   );
