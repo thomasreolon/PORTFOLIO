@@ -1,8 +1,12 @@
-import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
-import ToggableMenu from "./Menu";
+import React from "react"
+import { makeStyles, Typography } from "@material-ui/core"
+import ToggableMenu from "./Menu"
 
-const useStyles = makeStyles((theme) => ({
+import { projects } from "../../../costants/projects"
+
+const projList = Object.values(projects)
+
+const useStyles = makeStyles(theme => ({
   nav: {
     backgroundColor: "transparent",
     display: "flex",
@@ -10,18 +14,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     padding: "5px 20px",
   },
-}));
+}))
 
 function DesktopNav(props) {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
-    <>
-      <nav className={classes.nav}>
-        <ToggableMenu />
-        <Typography variant="overline">Thomas Reolon</Typography>
-      </nav>
-    </>
-  );
+    <nav className={classes.nav}>
+      <ToggableMenu projList={projList} />
+      <Typography variant="overline">Thomas Reolon</Typography>
+    </nav>
+  )
 }
 
-export default DesktopNav;
+export default DesktopNav

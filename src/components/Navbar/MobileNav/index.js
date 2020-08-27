@@ -1,12 +1,15 @@
-import React from "react";
-import Menu from "./Menu";
+import React from "react"
+import Menu from "./Menu"
+import { projects } from "../../../costants/projects"
 
-function MobileNav(props) {
+const projList = Object.values(projects)
+
+function MobileNav() {
   return (
     <>
-      <Menu />
+      <Menu projList={projList} />
     </>
-  );
+  )
 }
 
-export default MobileNav;
+export default MobileNav

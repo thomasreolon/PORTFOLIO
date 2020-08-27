@@ -1,14 +1,13 @@
-import React from "react";
+import React from "react"
 
-import cmm from "../../scripts/common";
+import { useIsSmall } from "../../theme"
+import DesktopNav from "./DesktopNav"
+import MobileNav from "./MobileNav"
 
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+const Navbar = props => {
+  const isSmall = useIsSmall()
 
-const Navbar = (props) => {
-  const isSmall = cmm.useIsSmall();
+  return isSmall ? <MobileNav /> : <DesktopNav />
+}
 
-  return isSmall ? <MobileNav /> : <DesktopNav />;
-};
-
-export default Navbar;
+export default Navbar

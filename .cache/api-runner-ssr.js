@@ -1,4 +1,19 @@
-var plugins = []
+var plugins = [{
+      plugin: require('C:/Users/Thomas/Desktop/portfoli/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('C:/Users/Thomas/Desktop/portfoli/node_modules/gatsby-theme-material-ui-top-layout/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('C:/Users/Thomas/Desktop/portfoli/node_modules/gatsby-plugin-material-ui/gatsby-ssr'),
+      options: {"plugins":[],"stylesProvider":{"injectFirst":true}},
+    },{
+      plugin: require('C:/Users/Thomas/Desktop/portfoli/node_modules/gatsby-plugin-webfonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":{"google":[{"family":"Montserrat","variants":["300","400","500"]}]}},
+    },{
+      plugin: require('C:/Users/Thomas/Desktop/portfoli/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {

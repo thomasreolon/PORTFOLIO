@@ -1,26 +1,12 @@
-import React from "react";
+import React from "react"
 
-import Navbar from "../components/Navbar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import contexts from "../scripts/contexts";
-import { compose } from "recompose";
-import { withTheme } from "../scripts/material/index";
+import SEO from "../components/SEO"
+import Layout from "../components/Layout"
 
-// App Component
-function App() {
-  return (
-    <>
-      <CssBaseline /> {/* global styles declared in material/theme.js*/}
-      <Navbar />
-    </>
-  );
-}
+const IndexPage = () => (
+  <Layout>
+    <SEO title="Home" />
+  </Layout>
+)
 
-const MyApp = compose(
-  // list the context you want to use here
-  contexts.user.withContext,
-  contexts.theme.withContext,
-  withTheme
-)(App);
-
-export default MyApp;
+export default IndexPage

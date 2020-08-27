@@ -1,12 +1,9 @@
-import React from "react";
-import MenuIcon from "@material-ui/icons/Menu";
-import IconButton from "@material-ui/core/IconButton";
-import withStyles from "@material-ui/core/styles/withStyles";
-import Menu from "@material-ui/core/Menu";
-import Typography from "@material-ui/core/Typography";
-import projects from "../../../scripts/projects";
-
-const projList = Object.values(projects);
+import React from "react"
+import MenuIcon from "@material-ui/icons/Menu"
+import IconButton from "@material-ui/core/IconButton"
+import withStyles from "@material-ui/core/styles/withStyles"
+import Menu from "@material-ui/core/Menu"
+import Typography from "@material-ui/core/Typography"
 
 const StyledMenu = withStyles({
   paper: {
@@ -14,7 +11,7 @@ const StyledMenu = withStyles({
     marginTop: "30px",
     padding: "0 15px",
   },
-})((props) => <Menu {...props} />);
+})(props => <Menu {...props} />)
 
 const Item = withStyles({
   item: {
@@ -33,18 +30,18 @@ const Item = withStyles({
     <Typography className={classes.item}>{name}</Typography>
     <div className={classes.divider}></div>
   </a>
-));
+))
 
-function ToggableMenu(props) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+function ToggableMenu({ projList }) {
+  const [anchorEl, setAnchorEl] = React.useState(null)
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
 
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   return (
     <div>
@@ -62,12 +59,12 @@ function ToggableMenu(props) {
         anchorEl={anchorEl}
       >
         {projList.map(({ name, link }) => {
-          if (!name || !link) return <></>;
-          return <Item name={name} link={link} />;
+          if (!name || !link) return <></>
+          return <Item name={name} link={link} key={name} />
         })}
       </StyledMenu>
     </div>
-  );
+  )
 }
 
-export default ToggableMenu;
+export default ToggableMenu

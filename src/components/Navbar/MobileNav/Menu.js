@@ -1,21 +1,18 @@
-import React from "react";
-import Drawer from "@material-ui/core/Drawer";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
-import FolderIcon from "@material-ui/icons/Folder";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import withStyles from "@material-ui/core/styles/withStyles";
-import { Link } from "react-router-dom";
-import projects from "../../../scripts/projects";
-
-const projList = Object.values(projects);
+import React from "react"
+import Drawer from "@material-ui/core/Drawer"
+import IconButton from "@material-ui/core/IconButton"
+import List from "@material-ui/core/List"
+import MenuIcon from "@material-ui/icons/Menu"
+import CloseIcon from "@material-ui/icons/Close"
+import FolderIcon from "@material-ui/icons/Folder"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemIcon from "@material-ui/core/ListItemIcon"
+import ListItemText from "@material-ui/core/ListItemText"
+import withStyles from "@material-ui/core/styles/withStyles"
+import { Link } from "gatsby-theme-material-ui"
 
 const MyLink = ({ link, children }) => {
-  const local = link[0] === "/";
+  const local = link[0] === "/"
   return (
     <div>
       {local ? (
@@ -26,8 +23,8 @@ const MyLink = ({ link, children }) => {
         </a>
       )}
     </div>
-  );
-};
+  )
+}
 
 const Item = ({ Icon, name, link }) => {
   return (
@@ -39,15 +36,15 @@ const Item = ({ Icon, name, link }) => {
         </ListItem>
       </ListItem>
     </MyLink>
-  );
-};
+  )
+}
 
-function Menu({ classes }) {
-  const [state, setState] = React.useState(false);
-  const toggleDrawer = (event) => {
-    setState((st) => !st);
-    event.preventDefault();
-  };
+function Menu({ classes, projList }) {
+  const [state, setState] = React.useState(false)
+  const toggleDrawer = event => {
+    setState(st => !st)
+    event.preventDefault()
+  }
 
   return (
     <>
@@ -75,12 +72,12 @@ function Menu({ classes }) {
         </List>
       </Drawer>
     </>
-  );
+  )
 }
 
 const styles = {
   drawerPaper: {
-    width: "60%",
+    width: "70%",
   },
   close__btn: {
     position: "absolute",
@@ -93,6 +90,6 @@ const styles = {
     position: "relative",
     height: "45px",
   },
-};
+}
 
-export default withStyles(styles)(Menu);
+export default withStyles(styles)(Menu)
