@@ -3,10 +3,11 @@ import { makeStyles, Typography } from "@material-ui/core"
 import ToggableMenu from "./Menu"
 
 import { projects } from "../../../costants/projects"
+import PopupIcon from "../PopupIcon"
 
 const projList = Object.values(projects)
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   nav: {
     backgroundColor: "transparent",
     display: "flex",
@@ -16,12 +17,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function DesktopNav(props) {
+function DesktopNav() {
   const classes = useStyles()
   return (
     <nav className={classes.nav}>
       <ToggableMenu projList={projList} />
       <Typography variant="overline">Thomas Reolon</Typography>
+      <PopupIcon />
     </nav>
   )
 }

@@ -85,7 +85,7 @@ const styles = {
     fontSize: "30px",
   },
   close: {
-    backgroundColor: "#616161",
+    backgroundColor: "#656569",
     width: "100%",
     position: "relative",
     height: "45px",
