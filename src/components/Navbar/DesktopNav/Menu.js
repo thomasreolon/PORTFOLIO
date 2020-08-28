@@ -27,7 +27,7 @@ const Item = withStyles({
     marginBottom: "25px",
   },
 })(({ name, link, classes }) => (
-  <a href={link} target="_blank">
+  <a href={link} target="_blank" rel="noreferrer">
     <Typography className={classes.item}>{name}</Typography>
     <div className={classes.divider}></div>
   </a>

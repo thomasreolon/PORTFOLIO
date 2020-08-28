@@ -32,7 +32,7 @@ const dark = {
 
 const withMaterializeTheme = Component => {
   const WithTheme = props => {
-    const [{ darkMode }, dispatch] = contexts.theme.useContext()
+    const [{ darkMode }] = contexts.theme.useContext()
     const customTheme = createMuiTheme({
       palette: darkMode ? dark : light,
       //--------------------------------------------------------------- THEME FONTS -------

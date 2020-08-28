@@ -37,7 +37,7 @@ function PopupIcon(props) {
       }, 5000)
       return () => clearTimeout(timer)
     }
-  }, [])
+  }, [hasSeenPopup, dispatch])
   return (
     <>
       <IconButton

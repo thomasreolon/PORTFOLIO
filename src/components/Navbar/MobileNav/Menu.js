@@ -18,7 +18,7 @@ const MyLink = ({ link, children }) => {
       {local ? (
         <Link to={link}>{children}</Link>
       ) : (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
           {children}
         </a>
       )}
