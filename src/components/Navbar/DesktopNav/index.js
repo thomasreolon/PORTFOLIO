@@ -9,6 +9,9 @@ const projList = Object.values(projects)
 
 const useStyles = makeStyles(() => ({
   nav: {
+    position: "absolute",
+    top: 0,
+    width: "100%",
     backgroundColor: "transparent",
     display: "flex",
     alignItems: "center",
