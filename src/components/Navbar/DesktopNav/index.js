@@ -17,6 +17,7 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     justifyContent: "space-between",
     padding: "5px 20px",
+    zIndex: 3000,
   },
 }))
 

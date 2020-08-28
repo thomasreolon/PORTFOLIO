@@ -12,9 +12,9 @@ const useStyles = makeStyles({
   image: {
     height: "100vh",
     width: "100%",
-    zIndex: "-5",
+    zIndex: "-5 !important",
     "& *": {
-      zIndex: "-5",
+      zIndex: "-5 !important",
       "& *": {
         zIndex: -5,
       },
