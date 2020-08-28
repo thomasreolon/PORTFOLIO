@@ -15,18 +15,19 @@ const StyledMenu = withStyles({
 
 const Item = withStyles({
   item: {
+    width: "20vw",
+    textAlign: "center",
     "&:hover": {
       color: "grey",
     },
   },
   divider: {
-    width: "300%",
-    transform: "translateX(-33%)",
     border: "1px solid lightgrey",
     borderRadius: "50%",
+    marginBottom: "25px",
   },
 })(({ name, link, classes }) => (
-  <a href={link} target="_blank">
+  <a href={link} target="_blank" rel="noreferrer">
     <Typography className={classes.item}>{name}</Typography>
     <div className={classes.divider}></div>
   </a>

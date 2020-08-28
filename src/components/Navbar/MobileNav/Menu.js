@@ -18,7 +18,7 @@ const MyLink = ({ link, children }) => {
       {local ? (
         <Link to={link}>{children}</Link>
       ) : (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
           {children}
         </a>
       )}
@@ -85,7 +85,7 @@ const styles = {
     fontSize: "30px",
   },
   close: {
-    backgroundColor: "#616161",
+    backgroundColor: "#656569",
     width: "100%",
     position: "relative",
     height: "45px",

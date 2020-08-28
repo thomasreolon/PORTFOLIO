@@ -5,7 +5,7 @@ import {
   useTheme,
 } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
-
+import colors from "./costants/colors"
 import contexts from "./contexts"
 
 // more customization: https://material-ui.com/customization/default-theme/
@@ -13,16 +13,18 @@ import contexts from "./contexts"
 
 const light = {
   type: "light",
-  text: { primary: "#f00" },
+  background: { default: colors.light.bg_1 },
+  text: { primary: colors.light.text },
 }
 
 const dark = {
   type: "dark",
-  background: { default: "#111" },
-  /*text: { primary: "#fff" },
+  background: { default: colors.dark.bg_1, paper: colors.dark.bg_2 },
+  text: { primary: colors.dark.text },
   primary: {
-    main: "#000",
+    main: "rgba(0,0,0,0.3)",
   },
+  /*
   secondary: {
     main: "#fff",
   },*/
@@ -30,7 +32,7 @@ const dark = {
 
 const withMaterializeTheme = Component => {
   const WithTheme = props => {
-    const [{ darkMode }, dispatch] = contexts.theme.useContext()
+    const [{ darkMode }] = contexts.theme.useContext()
     const customTheme = createMuiTheme({
       palette: darkMode ? dark : light,
       //--------------------------------------------------------------- THEME FONTS -------

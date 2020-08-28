@@ -23,6 +23,9 @@ const Layout = ({ children }) => {
   )
 }
 
+/**
+ * context providers are added as a wrapper to the layout component
+ */
 export default compose(
   contexts.theme.withContext,
   contexts.user.withContext,
