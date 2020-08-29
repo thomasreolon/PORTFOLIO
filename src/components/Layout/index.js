@@ -13,11 +13,11 @@ import Navbar from "../Navbar"
 const Layout = ({ children }) => {
   return (
     <>
-      <CssBaseline /> {/* global styles declared in material/theme.js*/}
+      <CssBaseline />
       <header>
         <Navbar />
       </header>
-      <main>{children}</main>
+      <main style={{ overflow: "scroll" }}>{children}</main>
       <footer></footer>
     </>
   )

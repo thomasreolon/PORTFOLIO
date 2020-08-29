@@ -66,6 +66,7 @@ function Menu({ classes, projList }) {
           </IconButton>
         </div>
         <List>
+          <h3 style={{ textAlign: "center" }}>Projects</h3>
           {projList.map(({ name, link, Icon }) => (
             <Item name={name} link={link} Icon={Icon} key={name} />
           ))}

@@ -37,7 +37,8 @@ function ToggableMenu({ projList }) {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
   const handleClick = event => {
-    setAnchorEl(event.currentTarget)
+    if (!anchorEl) setAnchorEl(event.currentTarget)
+    else setAnchorEl(null)
   }
 
   const handleClose = () => {
