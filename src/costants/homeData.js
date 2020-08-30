@@ -1,14 +1,15 @@
-import { Github, LinkedIn, GitHub } from "@material-ui/icons"
+import { LinkedIn, GitHub } from "@material-ui/icons"
+import { links } from "./projects"
 
 export default {
   links: [
     {
       name: "Contact Me",
-      link: "/contact",
+      link: links.CONTACT,
     },
     {
       name: "See my CV",
-      link: "/cv",
+      link: links.CV,
     },
     {
       name: "Projects",

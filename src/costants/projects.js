@@ -20,8 +20,8 @@ const projects = {
 }
 const links = {
   LANDING: "/",
-  RESUME: "/resume",
-
+  CV: "/cv",
+  CONTACT: "/contact",
   GITHUB: "https://github.com/thomasreolon",
 }
 
