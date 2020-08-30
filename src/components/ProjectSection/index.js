@@ -1,6 +1,5 @@
 import React from "react"
 import { makeStyles, Typography } from "@material-ui/core"
-import { useIsSmall } from "../../theme"
 import Project from "./Project"
 
 const useStyles = makeStyles({
@@ -17,21 +16,24 @@ const useStyles = makeStyles({
   centerer: {
     marginLeft: "auto",
     marginRight: "auto",
+    width: "90%",
   },
   projWrap: {
     width: "100%",
     display: "flex",
     flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "20px",
   },
 })
 
-function ProjectSection({ title, icons, projects, tag }) {
-  const isSmall = useIsSmall()
+function ProjectSection({ title, icons, projects, tag, id }) {
   const cls = useStyles()
 
   return (
-    <div className={cls.wrap}>
-      <div className={cls.centerer} style={{ width: isSmall ? "90%" : "70%" }}>
+    <div id={id} className={cls.wrap}>
+      <div className={cls.centerer}>
         <Typography variant="h4">{title}</Typography>
         <div className={cls.icons}>
           {icons.map(Icon => (

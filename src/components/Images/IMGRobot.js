@@ -28,7 +28,7 @@ const Socials = ({ socials }) => {
   return (
     <div className={cls.root}>
       {socials.map(({ link, Icon }) => (
-        <a href={link} target="_blank" rel="noopener">
+        <a href={link} target="_blank" rel="noreferrer">
           <IconButton className={cls.icon}>
             <Icon />
           </IconButton>
@@ -38,7 +38,7 @@ const Socials = ({ socials }) => {
   )
 }
 
-const IMGRobot = () => {
+const ImgRobot = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "herorobot.png" }) {
@@ -72,4 +72,4 @@ const IMGRobot = () => {
   )
 }
 
-export default IMGRobot
+export default ImgRobot

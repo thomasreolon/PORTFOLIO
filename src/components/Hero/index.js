@@ -1,7 +1,7 @@
 import React from "react"
 import { useIsSmall } from "../../theme"
 import { makeStyles } from "@material-ui/core"
-import { IMGHero, IMGRobot } from "../Images"
+import { ImgHero, ImgRobot } from "../Images"
 import Sphere from "./Sphere"
 import Content from "./Content"
 
@@ -56,8 +56,8 @@ function Hero() {
         style={{ background: `rgba(0, 0, 0, ${darkness})` }}
       ></div>
 
-      {isSmall && <IMGRobot />}
-      {<IMGHero className={classes.image} style={{ minHeight: "100%" }} />}
+      {isSmall && <ImgRobot />}
+      {<ImgHero className={classes.image} style={{ minHeight: "100%" }} />}
       {!isSmall && <Sphere />}
 
       <div className={classes.nextSec}></div>

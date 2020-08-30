@@ -12,14 +12,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    ihhhhhhh-----
     <ProjectSection
       title="Frontend"
       icons={[]}
       projects={proj}
       tag="frontend"
+      id="projects"
     />
-    ihhhhjdajsdgashhh-----
   </Layout>
 )
 

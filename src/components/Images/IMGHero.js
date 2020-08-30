@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const IMGHero = () => {
+const ImgHero = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "herobg.jpg" }) {
@@ -24,4 +24,4 @@ const IMGHero = () => {
   )
 }
 
-export default IMGHero
+export default ImgHero

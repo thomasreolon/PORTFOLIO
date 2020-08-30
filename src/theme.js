@@ -69,6 +69,7 @@ const withMaterializeTheme = Component => {
               textDecoration: "none",
               color: "inherit",
             },
+            overflowX: "hidden",
           },
         },
       },
