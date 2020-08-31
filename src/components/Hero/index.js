@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   wrapper: {
     overflow: "hidden",
     position: "relative",
-    height: "105vh",
+    height: "100vh",
     width: "100%",
     "& .gatsby-image-wrapper": {
       height: "100%",
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     top: 0,
     zIndex: 3,
     width: "100vw",
-    height: "105vh",
+    height: "100vh",
   },
   robot: {
     position: "absolute",

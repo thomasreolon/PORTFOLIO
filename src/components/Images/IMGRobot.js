@@ -9,7 +9,7 @@ const styles = makeStyles({
   root: {
     position: "absolute",
     zIndex: "9999",
-    top: "55%",
+    top: "60%",
     right: "2%",
     display: "flex",
     flexDirection: "column",
@@ -55,20 +55,20 @@ const ImgRobot = () => {
     position: "absolute",
     width: "100%",
     height: "30%",
-    top: "90%",
+    top: "95%",
     transform: "translateY(-100%)",
     zIndex: "1000",
   }
 
   return (
-    <>
+    <div>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
         imgStyle={{ width: "100%" }}
         style={style}
       />
       <Socials socials={socials.extLinks} />
-    </>
+    </div>
   )
 }
 

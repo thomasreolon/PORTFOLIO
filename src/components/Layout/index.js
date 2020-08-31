@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
       <header>
         <Navbar />
       </header>
-      <main style={{ overflow: "scroll" }}>{children}</main>
+      <main>{children}</main>
       <footer></footer>
     </>
   )

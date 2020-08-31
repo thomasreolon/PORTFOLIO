@@ -19,16 +19,22 @@ const useStyles = makeStyles(() => ({
     padding: "5px 20px",
     zIndex: 3000,
   },
+  spacer: {
+    height: "50px",
+  },
 }))
 
 function DesktopNav() {
   const classes = useStyles()
   return (
-    <nav className={classes.nav}>
-      <ToggableMenu projList={projList} />
-      <Typography variant="overline">Thomas Reolon</Typography>
-      <PopupIcon />
-    </nav>
+    <>
+      <nav className={classes.nav}>
+        <ToggableMenu projList={projList} />
+        <Typography variant="overline">Thomas Reolon</Typography>
+        <PopupIcon />
+      </nav>
+      <div className={classes.spacer}></div>
+    </>
   )
 }
 
