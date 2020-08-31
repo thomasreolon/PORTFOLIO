@@ -46,7 +46,7 @@ function Content() {
       </Typography>
       <div className={cls.btn__wrap}>
         {desc.links.map(({ name, link }) => (
-          <Link to={link}>
+          <Link to={link} key={name}>
             <Button variant="contained" className={cls.btn}>
               {name}
             </Button>

@@ -16,7 +16,7 @@ const useStyle = makeStyles({
     width: "100%",
     minHeight: "100%",
     background:
-      "radial-gradient(circle, rgba(96,96,96,0) 66%, rgba(255,255,255,1) 100%)",
+      "radial-gradient(circle, rgba(96,96,96,0) 0%, rgba(255,255,255,0.9) 60%)",
   },
   abs: {
     position: "absolute",
