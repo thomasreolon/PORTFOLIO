@@ -60,6 +60,7 @@ function ToggableMenu({ projList }) {
         onClose={handleClose}
         anchorEl={anchorEl}
       >
+        <Item name="Home" link="/"></Item>
         {projList.map(({ name, link }) => {
           if (!name || !link) return <></>
           return <Item name={name} link={link} key={name} />

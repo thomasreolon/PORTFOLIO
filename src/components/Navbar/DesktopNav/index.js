@@ -1,9 +1,11 @@
 import React from "react"
 import { makeStyles, Typography } from "@material-ui/core"
-import ToggableMenu from "./Menu"
 
 import { projects } from "../../../costants/projects"
+
+import ToggableMenu from "./Menu"
 import PopupIcon from "../PopupIcon"
+import ThemeToggler from "../ThemeToggler"
 
 const projList = Object.values(projects)
 
@@ -31,7 +33,10 @@ function DesktopNav() {
       <nav className={classes.nav}>
         <ToggableMenu projList={projList} />
         <Typography variant="overline">Thomas Reolon</Typography>
-        <PopupIcon />
+        <div>
+          <PopupIcon />
+          <ThemeToggler />
+        </div>
       </nav>
       <div className={classes.spacer}></div>
     </>

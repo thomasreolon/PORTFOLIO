@@ -34,7 +34,7 @@ function PopupIcon(props) {
         dispatch({
           type: "SEEN",
         })
-      }, 5000)
+      }, 30000)
       return () => clearTimeout(timer)
     }
   }, [hasSeenPopup, dispatch])
@@ -46,7 +46,7 @@ function PopupIcon(props) {
         onClick={handleClick}
       >
         <Badge badgeContent={NBadges} color="error">
-          <NotificationsIcon style={{ color: "#fff" }} />
+          <NotificationsIcon />
         </Badge>
       </IconButton>
       <Menu

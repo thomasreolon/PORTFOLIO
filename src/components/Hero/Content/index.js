@@ -30,6 +30,7 @@ const useStyles = makeStyles({
   },
   title: {
     textAlign: "center",
+    color: "#fff",
   },
 })
 
