@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 })
 
-function CvSection({ title }) {
+function CvSection({ title, data }) {
   const isSmall = useIsSmall()
   const cls = useStyles()
   return (
@@ -26,13 +26,14 @@ function CvSection({ title }) {
         {title}
       </Typography>
       <div className={cls.list}>
-        <ScBlock
-          isSmall={isSmall}
-          title="High-School Diploma"
-          year="2017"
-          mark="100/100"
-          mainTopics="economy, IT"
-        />
+        {data.map(info => (
+          <ScBlock
+            key={info.img}
+            isSmall={isSmall}
+            data={Object.entries(info)}
+            img={info.img}
+          />
+        ))}
       </div>
     </>
   )

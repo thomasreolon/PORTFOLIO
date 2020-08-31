@@ -1,8 +1,6 @@
 import { LinkedIn, GitHub } from "@material-ui/icons"
 import links from "./links"
 
-console.log(links)
-
 export default {
   links: [
     {
