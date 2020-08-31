@@ -1,7 +1,21 @@
 import React from "react"
 import NotificationsIcon from "@material-ui/icons/Notifications"
-import { Badge, Menu, MenuItem, IconButton } from "@material-ui/core"
+import {
+  Badge,
+  Menu,
+  MenuItem,
+  IconButton,
+  makeStyles,
+} from "@material-ui/core"
 import contexts from "../../contexts"
+
+const useStyles = makeStyles({
+  menu: {
+    "& div": {
+      marginTop: "40px",
+    },
+  },
+})
 
 const DEF_MSG = "No Messages"
 
@@ -12,6 +26,7 @@ function PopupIcon(props) {
     NBadges: 0,
     msg: DEF_MSG,
   })
+  const cls = useStyles()
 
   // opening: remove badges and show menu
   const handleClick = event => {
@@ -53,6 +68,7 @@ function PopupIcon(props) {
         id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
+        className={cls.menu}
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >

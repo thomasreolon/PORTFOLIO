@@ -1,7 +1,7 @@
 const links = {
   LANDING: "/",
   CV: "/cv",
-  CONTACT: "/contact",
+  CONTACT: "#contact",
   GITHUB: "https://github.com/thomasreolon",
 }
 

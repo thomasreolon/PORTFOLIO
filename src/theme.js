@@ -61,6 +61,9 @@ const withMaterializeTheme = Component => {
             "html, body, #root": {
               height: "100%",
             },
+            html: {
+              scrollBehavior: "smooth",
+            },
             "*": {
               margin: "0",
               boxSizing: "border-box",
@@ -91,4 +94,9 @@ function useIsSmall() {
   return isSmall
 }
 
-export { withMaterializeTheme, useIsSmall }
+function useIsDark() {
+  const [theme] = contexts.theme.useContext()
+  return theme.darkMode
+}
+
+export { withMaterializeTheme, useIsSmall, useIsDark }

@@ -5,6 +5,7 @@ import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import ProjectSection from "../components/ProjectSection"
+import Contact from "../components/Contact"
 
 const proj = Object.values(projects)
 
@@ -19,6 +20,7 @@ const IndexPage = () => (
       tag="frontend"
       id="projects"
     />
+    <Contact />
   </Layout>
 )
 

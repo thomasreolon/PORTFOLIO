@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     background: "#rgb(237,234,234)",
     boxShadow: "1px 1px 4px 1px #555",
     borderRadius: "8px",
-    minWidth: "450px",
     maxWidth: "650px",
     display: "flex",
     justifyContent: "space-between",
@@ -44,7 +43,10 @@ function Block({ isSmall, data, img }) {
     <div
       className={cls.block}
       key={img}
-      style={{ margin: isSmall ? "10px" : "15px" }}
+      style={{
+        margin: isSmall ? "10px" : "15px",
+        minWidth: isSmall ? "95vw" : "450px",
+      }}
     >
       <table className={cls.table}>
         <tbody>
