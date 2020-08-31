@@ -37,7 +37,8 @@ function ToggableMenu({ projList }) {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
   const handleClick = event => {
-    setAnchorEl(event.currentTarget)
+    if (!anchorEl) setAnchorEl(event.currentTarget)
+    else setAnchorEl(null)
   }
 
   const handleClose = () => {
@@ -59,6 +60,7 @@ function ToggableMenu({ projList }) {
         onClose={handleClose}
         anchorEl={anchorEl}
       >
+        <Item name="Home" link="/"></Item>
         {projList.map(({ name, link }) => {
           if (!name || !link) return <></>
           return <Item name={name} link={link} key={name} />
