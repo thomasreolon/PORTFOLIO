@@ -8,7 +8,7 @@ Almost Completed:
 
 todo
 
-##### `npm run deploy` does not work... (error in gatsby-material-ui-theme) (works in development)) (open issue)
+##### Components not working?
 
 ##### Github actions for continious deployment
 
