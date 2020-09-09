@@ -37,16 +37,16 @@ const withMaterializeTheme = Component => {
       palette: darkMode ? dark : light,
       //--------------------------------------------------------------- THEME FONTS -------
       typography: {
-        fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
         h1: {
-          fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
+          fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
           fontWeight: 300,
           fontSize: "5rem",
           lineHeight: 1.167,
           letterSpacing: "-0.01562em",
         },
         overline: {
-          fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
+          fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
           fontWeight: 400,
           fontSize: "1rem",
           lineHeight: 1.66,

@@ -2,7 +2,7 @@ import React from "react"
 
 function Image() {
   let src = "none"
-  if (typeof variable !== "undefined") {
+  if (typeof window !== "undefined") {
     var search = window.location.search
     var params = new URLSearchParams(search)
     src = `/certificates/${params.get("name")}.jpg`
