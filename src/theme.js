@@ -15,6 +15,9 @@ const light = {
   type: "light",
   background: { default: colors.light.bg_1 },
   text: { primary: colors.light.text },
+  primary: {
+    main: "#d9d9e1",
+  },
 }
 
 const dark = {
@@ -24,8 +27,8 @@ const dark = {
   primary: {
     main: "rgba(0,0,0,0.3)",
   },
-  /*
-  secondary: {
+
+  /*secondary: {
     main: "#fff",
   },*/
 }

@@ -1,7 +1,7 @@
 export default {
   dark: {
     bg_1: "#111",
-    bg_2: "#555",
+    bg_2: "#353535",
     light: "#0a1a29",
     text: "#fff",
   },

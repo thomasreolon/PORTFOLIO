@@ -5,11 +5,14 @@ import List from "@material-ui/core/List"
 import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
 import FolderIcon from "@material-ui/icons/Folder"
+import HomeIcon from "@material-ui/icons/Home"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
+import Divider from "@material-ui/core/Divider"
 import withStyles from "@material-ui/core/styles/withStyles"
 import { Link } from "gatsby-theme-material-ui"
+import { useIsSmall } from "../../../theme"
 
 const MyLink = ({ link, children }) => {
   const local = link[0] === "/"
@@ -40,6 +43,7 @@ const Item = ({ Icon, name, link }) => {
 }
 
 function Menu({ classes, projList }) {
+  const isSmall = useIsSmall()
   const [state, setState] = React.useState(false)
   const toggleDrawer = event => {
     setState(st => !st)
@@ -54,7 +58,7 @@ function Menu({ classes, projList }) {
       <Drawer
         type="temporary"
         classes={{
-          paper: classes.drawerPaper,
+          paper: { width: isSmall ? "70%" : "30%" },
         }}
         anchor="left"
         open={state}
@@ -66,6 +70,20 @@ function Menu({ classes, projList }) {
           </IconButton>
         </div>
         <List>
+          <Link to="/">
+            <ListItem className={classes.white}>
+              <ListItem button>
+                <ListItemIcon>
+                  {" "}
+                  <HomeIcon />{" "}
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </ListItem>
+          </Link>
+          <Divider />
+          <br />
+
           <h3 style={{ textAlign: "center" }}>Projects</h3>
           {projList.map(({ name, link, Icon }) => (
             <Item name={name} link={link} Icon={Icon} key={name} />
@@ -77,13 +95,13 @@ function Menu({ classes, projList }) {
 }
 
 const styles = {
-  drawerPaper: {
-    width: "70%",
-  },
   close__btn: {
     position: "absolute",
     right: "10px",
     fontSize: "30px",
+  },
+  white: {
+    color: "#fff",
   },
   close: {
     backgroundColor: "#656569",
